@@ -1,7 +1,16 @@
+
 class post():
 	def __init__(self,user,content):
 		self.user=user
 		self.content=content
+class comment(post):
+	def __init__(self,email,date):
+		self.email=email
+		self.date=date
+	def person_commenting(self,email):
+		print(self.email+ "has commented"+ text)
+	def commenting_date(self,date):
+		print("this comment was posted on"+ self.date)
 class user():
 	def __init__(self,name,email,password):
 		self.name=name
@@ -24,7 +33,6 @@ class user():
 		print("password: "+self.password)
 		print("friends: "+str(self.friends_list))
 		print("posts: "+str(self.posts))
-
 user1=user("yazan "," yazandakkak@facebook"," 123")
 user2=user("osama "," osamahijazi@facebook"," 234")
 user2.add_friend(" yazandakkak@facebook")
